@@ -43,11 +43,11 @@ const PostList = ({ posts, onPostDeleted, onPostDonated, onCommentAdded }) => {
               <i className="bi bi-file-text me-2 text-primary"></i>
               {post.title}
             </h4>
-            <h5>{post.description}</h5>
+            <h6>{post.description}</h6>
             <h4 className="card-money">
-              {parseInt(post.moneyCurrent)}/{parseInt(post.moneyGoal)}₽
+              Уже собрано {parseInt(post.moneyCurrent)}/{parseInt(post.moneyGoal)} ₽
             </h4>
-            <div className="progress" style={{ height: "20px" }}>
+            <div className="progress" style={{ height: "20px", width: "302px", marginBottom: "15px"}}>
             <div
               className="progress-bar bg-success"
               role="progressbar"
@@ -60,7 +60,7 @@ const PostList = ({ posts, onPostDeleted, onPostDonated, onCommentAdded }) => {
             </div>
           </div>
             <input
-              style={{ width: '100px', display: 'inline-block', marginRight: '10px' }}
+              style={{ width: '160px', display: 'inline-block', marginRight: '10px' }}
               className="form-control"
               id="goal"
               type="number"

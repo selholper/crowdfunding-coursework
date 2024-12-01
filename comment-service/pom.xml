@@ -9,7 +9,7 @@
 		<version>3.3.1</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.pnimac.comment</groupId>
+	<groupId>ru.selholper.comment</groupId>
 	<artifactId>comment-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>comment-service</name>
@@ -91,7 +91,7 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.pnimac.auth</groupId>
+			<groupId>ru.selholper.auth</groupId>
 			<artifactId>user-auth-service</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>

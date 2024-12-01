@@ -57,7 +57,7 @@ const CreatePost = ({ onPostCreated }) => {
             required
           />
         </div>
-        <button type="submit" className="btn btn-primary">Создать пост</button>
+        <button type="submit" className="btn btn-primary">Создать сбор</button>
       </form>
     </div>
   );
