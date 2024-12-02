@@ -23,10 +23,6 @@ public class CommentService {
 		return commentRepository.saveAndFlush(comment);
 	}
 	
-	public List<Comment> findAllByOrderByCreatedAtDesc(){
-		return commentRepository.findAllByOrderByCreatedAtAsc();
-	}
-	
 	public List<Comment> findByFundraiserIdByOrderByCreatedAtDesc(Long postId){
 		return commentRepository.findByFundraiserId(postId);
 	}

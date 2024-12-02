@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useAuth } from '../hooks/useAuth';
-import PostList from './PostList';
-import CreatePost from './CreatePost';
+import FundraiserList from './FundraiserList';
+import CreateFundraiser from './CreateFundraiser';
 import createPostService from '../api/postService';
-import blogImage from "../images/welcomepic.png";
 
 function Home() {
   const { authenticated, username, getAuthToken } = useAuth();
@@ -79,11 +78,11 @@ function Home() {
         </div>
       ) : (
         <div>
-          <CreatePost onPostCreated={handlePostCreated} />
+          <CreateFundraiser onPostCreated={handlePostCreated} />
           {isLoading ? (
             <p>Данные загружаются...</p>
           ) : (
-            <PostList 
+            <FundraiserList
               posts={posts} 
               onPostDeleted={handlePostDeleted}
               onPostDonated={handlePostDonated}

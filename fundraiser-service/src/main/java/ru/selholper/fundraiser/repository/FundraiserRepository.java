@@ -16,8 +16,6 @@ public interface FundraiserRepository extends JpaRepository<Fundraiser, Long> {
 
 	List<Fundraiser> findAllByOrderByCreatedAtDesc();
 
-    List<Fundraiser> findByUsername(String username);
-
     @Modifying
     @Query("UPDATE Fundraiser f SET f.moneyCurrent = f.moneyCurrent + :donatedMoney WHERE f.id = :fundraiserId")
     void updateMoneyCurrent(@Param("fundraiserId") Long fundraiserId, @Param("donatedMoney") BigDecimal donatedMoney);

@@ -38,20 +38,8 @@ public class SecurityConfig {
 
 	@Bean
 	public PasswordEncoder passwordEncoder() {
-		return new BCryptPasswordEncoder();//We're using BCrypt for password hashing.
+		return new BCryptPasswordEncoder();
 	}
-
-	/**
-	 * We're allowing CORS for the React client running on http://localhost:3000.
-	 * We're disabling CSRF protection as it's typically not needed for stateless JWT authentication.
-	 * Allowing public access to /api/auth/** endpoints (for login/register), and
-	 * requiring authentication for all other requests. 
-	 * Setting the session creation policy to STATELESS since we're using JWTs. 
-	 * Adding a custom JwtAuthenticationFilter before the UsernamePasswordAuthenticationFilter. 
-	 * @param http
-	 * @return
-	 * @throws Exception
-	 */
 
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {

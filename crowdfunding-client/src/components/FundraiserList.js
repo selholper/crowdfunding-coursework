@@ -3,7 +3,7 @@ import { useAuth } from '../hooks/useAuth';
 import AddComment from './AddComment';
 import ViewComments from './ViewComments';
 
-const PostList = ({ posts, onPostDeleted, onPostDonated, onCommentAdded }) => {
+const FundraiserList = ({ posts, onPostDeleted, onPostDonated, onCommentAdded }) => {
   const { username } = useAuth();
   const [activeCommentPost, setActiveCommentPost] = useState(null);
   const [viewingComments, setViewingComments] = useState(null);
@@ -92,4 +92,4 @@ const PostList = ({ posts, onPostDeleted, onPostDonated, onCommentAdded }) => {
   );
 };
 
-export default PostList;
+export default FundraiserList;

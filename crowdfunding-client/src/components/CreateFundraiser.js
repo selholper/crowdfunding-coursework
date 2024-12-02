@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../hooks/useAuth';
 
-const CreatePost = ({ onPostCreated }) => {
+const CreateFundraiser = ({ onPostCreated }) => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
   const [moneyGoal, setMoneyGoal] = useState(1000);
@@ -63,4 +63,4 @@ const CreatePost = ({ onPostCreated }) => {
   );
 };
 
-export default CreatePost;
+export default CreateFundraiser;

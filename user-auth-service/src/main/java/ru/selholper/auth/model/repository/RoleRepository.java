@@ -10,5 +10,5 @@ import ru.selholper.auth.model.Role;
 @Repository
 public interface RoleRepository extends JpaRepository<Role, Long>{
 
-	public Optional<Role> findByRolename(String rolename);
+	Optional<Role> findByRolename(String rolename);
 }
